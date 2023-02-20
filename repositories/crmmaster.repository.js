@@ -194,7 +194,7 @@ exports.getProjectInformationList = async (ProjectNo) => {
 }
 exports.getEmployeesList = async () => {
     try {
-        
+        console.log('GetEmployeeList')
         let result = knex.select('*').from('Employees')
             .then(function(dept){
                 dept.forEach(function(dept){
@@ -203,7 +203,7 @@ exports.getEmployeesList = async () => {
             }).catch(function(err){
                 console.log(err); ; knex.destroy(); 
             }).finally(function(){
-                knex.destroy(); 
+                knex.destroy();  console.log(result);
             });
         
         //let result = await sqlRequest.query(strQuery);
