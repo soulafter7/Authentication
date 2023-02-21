@@ -1,12 +1,6 @@
 // เรียกใช้งาน environment variable
 require('dotenv').config();
 
-console.log(
-	process.env.NODE_ENV,
-	process.env.PORT,
-    process.env.Swagger_Host,
-    process.env.NODE_ENV
-)
 
 // เรียกใช้งาน express module 
 const express = require('express');
